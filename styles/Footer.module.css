@@ -1,0 +1,44 @@
+.footer {
+    background-color: #B499B1;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.linksContainer a:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.linksContainer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.linksContainer a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.iconsContainer {
+    display: flex;
+}
+
+.iconsContainer img:not(:last-child) {
+    margin-right: 15px;
+}
+
+.iconsContainer img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.iconsContainer img:hover {
+    opacity: 0.8;
+}

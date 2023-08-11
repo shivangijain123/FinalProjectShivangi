@@ -1,0 +1,59 @@
+.experienceContainer {
+    display: flex;
+    padding: 20px;
+}
+
+.titleContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;  /* Making the "Experience" text black */
+}
+
+.boxesContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative; /* To allow for the ::before pseudo-element */
+    left: 250px;
+}
+
+.boxesContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30px;  /* Adjust for positioning; aligning the line a bit inward */
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+
+.box {
+    width: 20rem;
+    height: 7rem;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;  /* Add transform to the transition property */
+    margin-left: 45px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: black;
+}
+
+.box:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);  /* Scale the box slightly larger on hover */
+}
+
+.box h3,
+.box p {
+    margin: 5px 0; /* Adjust this value as desired */
+}
+
+

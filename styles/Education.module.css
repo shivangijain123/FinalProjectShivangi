@@ -1,0 +1,92 @@
+.educationContainer {
+    padding: 20px;
+    text-align: center;
+}
+
+.educationTitle {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    gap: 60px; 
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s;
+    margin-bottom: 20px; /* Space for the school name below */
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1px;
+    transition: transform 0.5s;
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.active .front {
+    transform: rotateY(180deg);
+}
+
+.card.active .back {
+    transform: rotateY(360deg);
+}
+
+/* ... existing styles ... */
+
+.front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1px;
+    transition: transform 0.5s;
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.schoolName {
+    margin-top: 10px; /* Adjust this value if needed */
+    word-wrap: break-word;
+    width: 150px; /* Match this with the card width */
+    text-align: center;
+}
+
+/* ... other styles ... */

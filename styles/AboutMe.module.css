@@ -1,0 +1,32 @@
+.aboutMeContainer {
+    background-image: url('/images/pic1.jpg'); /* Make sure your image is in the /public/images/ directory */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding: 20px; /* Provides some space between the container edge and the text. Adjust if necessary. */
+}
+
+/* This trick will make the div size itself based on the background image's aspect ratio. Adjust the padding value according to your image's aspect ratio. */
+.aboutMeContainer::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* Assuming 16:9 ratio. Adjust if different. */
+}
+
+.aboutMeTitle {
+    font-size: 40px;
+    position: absolute;
+    top: 120px; /* Adjust to control the vertical positioning of the title. */
+    left: 240px; /* Adjust to control the horizontal spacing from the left side. */
+    color: white;
+}
+
+.aboutMeDescription {
+    font-size: 16px;
+    position: absolute;
+    top: 200px; /* Adjust to control the space between title and description. */
+    left: 100px; /* Adjust to control the horizontal spacing from the left side. */
+    max-width: 40%; /* To ensure the text doesn't span the entire width. Adjust if necessary. */
+    color: white;
+}

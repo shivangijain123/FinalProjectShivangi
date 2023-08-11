@@ -1,0 +1,41 @@
+/* styles/NavBar.module.css */
+
+.nav {
+    background-color: #B499B1;
+    padding: 10px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menuItem {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 20px;
+  }
+  
+  .menuItem:hover {
+    color: #ddd;
+  }
+  
