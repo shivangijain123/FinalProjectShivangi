@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import styles from '../styles/Education.module.css';
+import Image from 'next/image'; // Import the Image component from 'next/image'
+import img1 from '..public/images/pic2.jpg';
+import v3 from '..public/images/pic3.jpg';
+import v1 from '..public/images/pic4.jpg';
 
 const Education = () => {
     const [selectedCard, setSelectedCard] = useState(null);
@@ -15,17 +19,17 @@ const Education = () => {
     const schools = [
         {
             name: "New Jersey Institute of Technology",
-            image: "/images/pic4.png",
+            image: v1,
             description: "Ms in Management, Business Analytics"
         },
         {
             name: "Dr. Graham's Homes",
-            image: "/images/pic2.png",
+            image: img1,
             description: "My role and achievements at University B."
         },
         {
             name: "Techno India University",
-            image: "/images/pic3.png",
+            image: v3,
             description: "My role and achievements at University C."
         }
     ];
@@ -35,18 +39,15 @@ const Education = () => {
             <h2 className={styles.educationTitle}>Education</h2>
             <div className={styles.cardsContainer}>
                 {schools.map((school, index) => (
-                    <div key={index}>
+                    <div key={index} className={`${styles.card} ${selectedCard === index ? styles.active : ''}`}>
                         <div 
-                            className={styles.card} 
+                            className={styles.front} 
                             onClick={() => toggleCard(index)}
-                            style={{ transform: selectedCard === index ? 'rotateY(180deg)' : 'none' }}
                         >
-                            <div className={styles.front}>
-                                <img src={school.image} alt={school.name} />
-                            </div>
-                            <div className={styles.back}>
-                                <p>{school.description}</p>
-                            </div>
+                            <Image src={school.image} alt={school.name} width={300} height={200} />
+                        </div>
+                        <div className={styles.back}>
+                            <p>{school.description}</p>
                         </div>
                         <p className={styles.schoolName}>{school.name}</p>
                     </div>
