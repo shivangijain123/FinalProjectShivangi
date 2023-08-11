@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styles from '../styles/Education.module.css';
-import Image from 'next/image'; // Import the Image component from 'next/image'
-import img1 from '..public/images/pic2.jpg';
-import v3 from '..public/images/pic3.jpg';
-import v1 from '..public/images/pic4.jpg';
+import Image from 'next/image'; 
+
+import img1 from '/public/images/pic2.jpg';
+import v3 from '/public/images/pic3.jpg';
+import v1 from '/public/images/pic4.jpg';
 
 const Education = () => {
     const [selectedCard, setSelectedCard] = useState(null);
